@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="topPanelPane" maxHeight="80.0" maxWidth="1.7976931348623157E308" minHeight="80.0" minWidth="-Infinity" prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #4e4e4e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="66.0" fitWidth="95.0" layoutX="-8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(two-pass-box, black, 2,.2, 0, 0);" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../images/logo.ico" />
+            </image>
+        </ImageView>
+        <Label layoutX="558.0" layoutY="6.0" text="Meyratech" textAlignment="RIGHT" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="Arial Black" size="30.0" />
+            </font>
+        </Label>
+        <Label layoutX="558.0" layoutY="54.0" text="Version 1.0" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
+    </children>
+</AnchorPane>

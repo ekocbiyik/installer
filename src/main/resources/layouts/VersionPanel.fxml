@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="217.0" layoutY="76.0" prefHeight="250.0" prefWidth="500.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columns>
+          <TableColumn minWidth="0.0" prefWidth="40.0" />
+          <TableColumn prefWidth="100.0" text="Uygulama" />
+            <TableColumn prefWidth="100.0" text="Açıklama" />
+            <TableColumn prefWidth="100.0" text="Versiyon" />
+            <TableColumn prefWidth="100.0" text="O. Tarihi" />
+            <TableColumn prefWidth="100.0" text="Boyut" />
+            <TableColumn prefWidth="100.0" text="Hash" />
+        </columns>
+      </TableView>
+      <TextField layoutX="117.0" layoutY="264.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="5.0" />
+      <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefWidth="100.0" text="Yükle" AnchorPane.leftAnchor="5.0" />
+      <ChoiceBox layoutX="592.0" layoutY="264.0" prefHeight="26.0" prefWidth="53.0" />
+   </children>
+</AnchorPane>
