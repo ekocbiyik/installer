@@ -9,12 +9,13 @@ import javafx.scene.layout.BorderPane;
  */
 public class MainScreen {
 
-    private BorderPane borderPane;
-    private GenericPanel topPanel;
-    private GenericPanel leftPanel;
-    private GenericPanel bottomPanel;
-    private GenericPanel dashboardPanel;
-    private GenericPanel versionPanel;
+    private static BorderPane borderPane;
+    private static GenericPanel topPanel;
+    private static GenericPanel leftPanel;
+    private static GenericPanel bottomPanel;
+    private static GenericPanel dashboardPanel;
+    private static GenericPanel versionPanel;
+    private static GenericPanel setupPanel;
 
     public MainScreen() {
         topPanel = new GenericPanel("/layouts/TopPanel.fxml");
@@ -22,6 +23,7 @@ public class MainScreen {
         bottomPanel = new GenericPanel("/layouts/BottomPanel.fxml");
         dashboardPanel = new GenericPanel("/layouts/DashboardPanel.fxml");
         versionPanel = new GenericPanel("/layouts/VersionPanel.fxml");
+        setupPanel = new GenericPanel("/layouts/SetupPanel.fxml");
     }
 
     public BorderPane getAppWindow() {
@@ -32,11 +34,21 @@ public class MainScreen {
             borderPane.setBottom(bottomPanel.getPanel());
 
             //..
-//            borderPane.setCenter(dashboardPanel.getPanel());
-            borderPane.setCenter(versionPanel.getPanel());
+            borderPane.setCenter(dashboardPanel.getPanel());
             borderPane.setAlignment(borderPane.getCenter(), Pos.TOP_LEFT);
         }
         return borderPane;
     }
 
+    public static GenericPanel getDashboardPanel() {
+        return dashboardPanel;
+    }
+
+    public static GenericPanel getVersionPanel() {
+        return versionPanel;
+    }
+
+    public static GenericPanel getSetupPanel() {
+        return setupPanel;
+    }
 }

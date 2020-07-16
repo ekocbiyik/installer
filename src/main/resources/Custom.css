@@ -1,0 +1,133 @@
+.titled-pane > .title {
+    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+}
+
+.anchor-pane {
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    /*-fx-background-color: #d7d7d7;*/
+}
+
+.combo-box {
+    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.left-panel-button {
+    -fx-background-radius: 0;
+    -fx-fill-width: true;
+}
+
+.left-panel-button:hover {
+    -fx-background-color: #727272;
+    -fx-text-fill: white;
+    -fx-background-size: 50px, 50px;
+}
+
+.btnDashboard {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnDashboard.png");
+    -fx-background-size: 30px, 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnDashboard-active {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnDashboard_active.png");
+    -fx-background-size: 50px, 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnVersion {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnVersion.png");
+    -fx-background-size: 30px, 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnVersion-active {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnVersion_active.png");
+    -fx-background-size: 50px, 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnSetup {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnSetup.png");
+    -fx-background-size: 30px, 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnSetup-active {
+    -fx-background-color: #727272;
+    -fx-background-image: url("/images/menu_icons/btnSetup_active.png");
+    -fx-background-size: 50px, 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-border-width: -1;
+}
+
+.text-area .content {
+    -fx-background-color: #f4f4f4;
+}
+
+.text-area:focused .content {
+    -fx-background-color: #f4f4f4;
+}
+
+.text-area:focused {
+    -fx-background-insets: 0;
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-border-width: -1;
+}
+
+
+/* basic settings */
+.CalendarTextField {
+}
+
+.CalendarTextFieldSkin .icon {
+    -fx-image: url("skin/clock.png");
+}
+
+.CalendarTextFieldSkin .icon:disabled {
+    -fx-image: url("skin/clock-grey.png");
+}
+
+.CalendarTextFieldSkin_popup {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-padding: 0.766667em 0.733333em 0.75em 0.733333em;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.CalendarTextFieldSkin_popup .close-icon {
+    -fx-image: url("skin/cancel.png");
+}
+
+.CalendarTextFieldSkin_popup .accept-icon {
+    -fx-image: url("skin/accept.png");
+}
