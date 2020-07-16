@@ -17,6 +17,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.concurrent.TimeUnit;
 
 /**
  * enbiya 13.07.2020
@@ -54,7 +55,7 @@ public class MainStage implements ApplicationListener<ApplicationStarter.StageRe
                 mainStage.setX((screenBounds.getWidth() - APP_WINDOW_WIDTH) / 2);
                 mainStage.setY((screenBounds.getHeight() - APP_WINDOW_HEIGHT) / 2);
 
-//                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(5);
                 splashWindow.dispose();
 
                 Scene root = new Scene(new MainScreen().getAppWindow());
