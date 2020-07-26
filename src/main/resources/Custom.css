@@ -9,13 +9,6 @@
     -fx-background-color: white;
 }
 
-.button {
-    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
-    /*-fx-background-color: #d7d7d7;*/
-}
-
 .combo-box {
     -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
     -fx-background-insets: 0, 1, 2;
@@ -36,7 +29,7 @@
 .btnDashboard {
     -fx-background-color: #727272;
     -fx-background-image: url("/images/menu_icons/btnDashboard.png");
-    -fx-background-size: 30px, 30px;
+    -fx-background-size: 40px, 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
@@ -81,6 +74,44 @@
     -fx-background-position: center;
 }
 
+.btnUpgrade {
+    -fx-background-image: url("/images/menu_icons/btnVersion_active.png");
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-background-size: 20px, 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnUpgrade:hover {
+    -fx-background-color: #383838;
+    -fx-scale-y: 1.1;
+}
+
+.btnUpgrade:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+
+.btnRestart {
+    -fx-background-radius: 0;
+    -fx-background-size: 20px, 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btnRestart:hover {
+    -fx-background-color: #727272;
+    -fx-scale-y: 1.1;
+    -fx-text-fill: #00baff;
+}
+
+.btnRestart:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
 .text-area {
     -fx-background-insets: 0;
     -fx-background-color: #f4f4f4;
@@ -103,31 +134,3 @@
     -fx-border-width: -1;
 }
 
-
-/* basic settings */
-.CalendarTextField {
-}
-
-.CalendarTextFieldSkin .icon {
-    -fx-image: url("skin/clock.png");
-}
-
-.CalendarTextFieldSkin .icon:disabled {
-    -fx-image: url("skin/clock-grey.png");
-}
-
-.CalendarTextFieldSkin_popup {
-    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
-    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
-    -fx-background-radius: 5, 5, 4, 3;
-    -fx-padding: 0.766667em 0.733333em 0.75em 0.733333em;
-    -fx-text-fill: -fx-text-base-color;
-}
-
-.CalendarTextFieldSkin_popup .close-icon {
-    -fx-image: url("skin/cancel.png");
-}
-
-.CalendarTextFieldSkin_popup .accept-icon {
-    -fx-image: url("skin/accept.png");
-}

@@ -1,4 +1,4 @@
-package com.ekocbiyik.installer.layouts;
+package com.ekocbiyik.layouts;
 
 import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;

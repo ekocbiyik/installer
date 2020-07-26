@@ -1,26 +1,25 @@
-package com.ekocbiyik.installer.layouts.panel;
+package com.ekocbiyik.layouts;
 
-import com.ekocbiyik.installer.layouts.controller.IPanelController;
+import com.ekocbiyik.controller.IPanelController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Region;
 
 import java.io.IOException;
 
 /**
  * enbiya 15.07.2020
  */
-public class GenericPanel {
+public class PanelGenerator {
 
-    private AnchorPane panel;
+    private Region panel;
     private IPanelController controller;
     private String fxmlPath;
 
-    public GenericPanel(String fxmlPath) {
+    public PanelGenerator(String fxmlPath) {
         this.fxmlPath = fxmlPath;
     }
 
-    public AnchorPane getPanel() {
-        panel = null;
+    public Region getPanel() {
         if (panel == null) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));

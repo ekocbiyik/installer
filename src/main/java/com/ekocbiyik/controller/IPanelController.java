@@ -1,4 +1,4 @@
-package com.ekocbiyik.installer.layouts.controller;
+package com.ekocbiyik.controller;
 
 /**
  * enbiya 15.07.2020

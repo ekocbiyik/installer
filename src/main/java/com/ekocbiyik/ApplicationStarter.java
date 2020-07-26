@@ -1,4 +1,4 @@
-package com.ekocbiyik.installer;
+package com.ekocbiyik;
 
 import javafx.application.Application;
 import javafx.application.HostServices;
@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import javax.swing.*;
 import java.io.BufferedReader;
@@ -21,7 +22,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-
+@EnableAsync
 @SpringBootApplication
 public class ApplicationStarter extends Application {
 
@@ -129,4 +130,3 @@ public class ApplicationStarter extends Application {
     }
 
 }
-

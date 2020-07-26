@@ -6,7 +6,7 @@
 
 <AnchorPane maxHeight="15.0" maxWidth="1.7976931348623157E308" minHeight="15.0" minWidth="-Infinity" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #4e4e4e;" styleClass="copyable-label" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label layoutX="443.0" layoutY="-1.0" text="Meyratech" textAlignment="RIGHT" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
+        <Label layoutX="443.0" layoutY="-1.0" text="TTG International" textAlignment="RIGHT" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
             <font>
                 <Font name="System Bold Italic" size="11.0" />
             </font>

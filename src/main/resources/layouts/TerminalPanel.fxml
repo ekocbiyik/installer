@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ekocbiyik.controller.TerminalPanelController">
+    <children>
+        <TextArea fx:id="terminalView" editable="false" layoutX="14.0" layoutY="136.0" prefHeight="300.0" prefWidth="680.0" style="-fx-text-fill: #00ff00; -fx-control-inner-background: #3c3f41;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+    </children>
+</AnchorPane>

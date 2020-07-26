@@ -1,7 +1,7 @@
-package com.ekocbiyik.installer;
+package com.ekocbiyik;
 
-import com.ekocbiyik.installer.layouts.MainScreen;
-import com.ekocbiyik.installer.layouts.SplashScreen;
+import com.ekocbiyik.layouts.MainScreen;
+import com.ekocbiyik.layouts.SplashScreen;
 import javafx.application.Platform;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
 
 /**
  * enbiya 13.07.2020
@@ -27,13 +27,14 @@ public class MainStage implements ApplicationListener<ApplicationStarter.StageRe
 
     private Logger logger = LoggerFactory.getLogger(MainStage.class);
     public static JFrame splashWindow;
-    private static double APP_WINDOW_WIDTH = 970;
-    private static double APP_WINDOW_HEIGHT = 700;
+    private static double APP_WINDOW_WIDTH = 900;
+    private static double APP_WINDOW_HEIGHT = 650;
     private TrayIcon trayIcon;
+    private static Stage mainStage;
 
     @Override
     public void onApplicationEvent(ApplicationStarter.StageReadyEvent stageReadyEvent) {
-        Stage mainStage = stageReadyEvent.getStage();
+        mainStage = stageReadyEvent.getStage();
         initTrayIcon(mainStage);
         Platform.setImplicitExit(false);
 
@@ -41,26 +42,25 @@ public class MainStage implements ApplicationListener<ApplicationStarter.StageRe
         Platform.runLater(() -> {
             try {
 
-//                Scene root = new Scene(new StackPane());
-//                mainStage.setScene(root);
-                mainStage.setTitle("Installer");
+                mainStage.setTitle("Docker Desktop Application");
                 mainStage.getIcons().add(new javafx.scene.image.Image("/images/logo.ico"));
 
                 mainStage.setWidth(APP_WINDOW_WIDTH);
                 mainStage.setHeight(APP_WINDOW_HEIGHT);
                 mainStage.setMinWidth(APP_WINDOW_WIDTH);
                 mainStage.setMinHeight(APP_WINDOW_HEIGHT);
+                mainStage.setMaxWidth(APP_WINDOW_WIDTH);
+                mainStage.setMaxHeight(APP_WINDOW_HEIGHT);
 
                 Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
                 mainStage.setX((screenBounds.getWidth() - APP_WINDOW_WIDTH) / 2);
                 mainStage.setY((screenBounds.getHeight() - APP_WINDOW_HEIGHT) / 2);
 
-                TimeUnit.SECONDS.sleep(5);
-                splashWindow.dispose();
-
                 Scene root = new Scene(new MainScreen().getAppWindow());
+                root.getStylesheets().add(getClass().getResource("/Custom.css").toExternalForm());
                 mainStage.setScene(root);
                 mainStage.show();
+                splashWindow.dispose();
             } catch (Exception e) {
                 e.printStackTrace();
                 Alert a = new Alert(Alert.AlertType.ERROR);
@@ -74,29 +74,35 @@ public class MainStage implements ApplicationListener<ApplicationStarter.StageRe
     private void initTrayIcon(final Stage mainStage) {
         logger.info("trayIcon initialize started...");
         if (SystemTray.isSupported()) {
+            mainStage.setOnCloseRequest(e -> hideWindow(mainStage));
+            ActionListener closeListener = e -> System.exit(0);
+            ActionListener showListener = e -> Platform.runLater(() -> {
+                mainStage.show();
+                logger.info("Application window is shown!");
+            });
+
+            PopupMenu popupMenu = new PopupMenu();
+            MenuItem showItem = new MenuItem("Show");
+            showItem.addActionListener(showListener);
+            popupMenu.add(showItem);
+
+            MenuItem closeItem = new MenuItem("Exit");
+            closeItem.addActionListener(closeListener);
+            popupMenu.add(closeItem);
+
+            SystemTray tray = SystemTray.getSystemTray();
+            Image icon = null;
             try {
-                mainStage.setOnCloseRequest(e -> hideWindow(mainStage));
-                ActionListener closeListener = e -> System.exit(0);
-                ActionListener showListener = e -> Platform.runLater(() -> {
-                    mainStage.show();
-                    logger.info("Application window is shown!");
-                });
+                icon = ImageIO.read(getClass().getResource("/images/tray.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-                PopupMenu popupMenu = new PopupMenu();
-                MenuItem showItem = new MenuItem("Show");
-                showItem.addActionListener(showListener);
-                popupMenu.add(showItem);
-
-                MenuItem closeItem = new MenuItem("Exit");
-                closeItem.addActionListener(closeListener);
-                popupMenu.add(closeItem);
-
-                SystemTray tray = SystemTray.getSystemTray();
-                java.awt.Image icon = ImageIO.read(getClass().getResource("/images/tray.png"));
-                trayIcon = new TrayIcon(icon, "Meyratech", popupMenu);
-                trayIcon.addActionListener(showListener);
+            trayIcon = new TrayIcon(icon, "Docker Desktop", popupMenu);
+            trayIcon.addActionListener(showListener);
+            try {
                 tray.add(trayIcon);
-            } catch (Exception e) {
+            } catch (AWTException e) {
                 e.printStackTrace();
             }
             logger.info("trayIcon has been created!");
@@ -118,7 +124,10 @@ public class MainStage implements ApplicationListener<ApplicationStarter.StageRe
     }
 
     public void showTrayPopup() {
-        if (trayIcon != null)
-            trayIcon.displayMessage("Info", "CheckupBOX is still running in background!", TrayIcon.MessageType.INFO);
+        trayIcon.displayMessage("Bilgi", "Asistan arkaplanda çalışmaya devam ediyor!", TrayIcon.MessageType.INFO);
+    }
+
+    public static Stage getMainStage() {
+        return mainStage;
     }
 }

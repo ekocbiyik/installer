@@ -1,71 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="210.0" prefWidth="240.0" text="Web uygulaması" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="10.0" prefHeight="16.0" prefWidth="70.0" text="Servis adı:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="30.0" prefHeight="16.0" prefWidth="70.0" text="Versiyon:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="CPU:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="70.0" text="RAM:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="90.0" prefHeight="16.0" prefWidth="70.0" text="Network:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="110.0" prefHeight="16.0" prefWidth="70.0" text="Durum:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="130.0" prefHeight="16.0" prefWidth="70.0" text="Servis ID:" AnchorPane.leftAnchor="0.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutX="15.0" layoutY="15.0" prefHeight="210.0" prefWidth="240.0" text="Arkaplan uygulaması" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="5.0">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="10.0" prefHeight="16.0" prefWidth="70.0" text="Servis adı:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="30.0" prefHeight="16.0" prefWidth="70.0" text="Versiyon:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="CPU:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="70.0" text="RAM:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="90.0" prefHeight="16.0" prefWidth="70.0" text="Network:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="110.0" prefHeight="16.0" prefWidth="70.0" text="Durum:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="130.0" prefHeight="16.0" prefWidth="70.0" text="Servis ID:" AnchorPane.leftAnchor="0.0" />
-               </children>
-            </AnchorPane>
-         </content>
-      </TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutX="260.0" layoutY="15.0" prefHeight="210.0" prefWidth="240.0" text="Ajan uygulaması" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="220.0">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="10.0" prefHeight="16.0" prefWidth="70.0" text="Servis adı:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="30.0" prefHeight="16.0" prefWidth="70.0" text="Versiyon:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="CPU:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="70.0" text="RAM:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="90.0" prefHeight="16.0" prefWidth="70.0" text="Network:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="110.0" prefHeight="16.0" prefWidth="70.0" text="Durum:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="130.0" prefHeight="16.0" prefWidth="70.0" text="Servis ID:" AnchorPane.leftAnchor="0.0" />
-               </children>
-            </AnchorPane>
-         </content>
-      </TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutX="15.0" layoutY="230.0" prefHeight="210.0" prefWidth="240.0" text="Veritabanı" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="220.0">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="10.0" prefHeight="16.0" prefWidth="70.0" text="Servis adı:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="30.0" prefHeight="16.0" prefWidth="70.0" text="Versiyon:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="CPU:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="70.0" text="RAM:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="90.0" prefHeight="16.0" prefWidth="70.0" text="Network:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="110.0" prefHeight="16.0" prefWidth="70.0" text="Durum:" AnchorPane.leftAnchor="0.0" />
-                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="130.0" prefHeight="16.0" prefWidth="70.0" text="Servis ID:" AnchorPane.leftAnchor="0.0" />
-               </children>
-            </AnchorPane>
-         </content>
-      </TitledPane>
-   </children>
-</AnchorPane>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<ScrollPane fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="200.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;"
+            stylesheets="@../Custom.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ekocbiyik.controller.DashboardController">
+    <content>
+        <VBox fx:id="vBoxMain" alignment="TOP_CENTER" spacing="5.0" style="-fx-background-color: white;">
+            <padding>
+                <Insets left="10.0" right="5.0" top="5.0"/>
+            </padding>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </VBox>
+    </content>
+    <opaqueInsets>
+        <Insets left="40.0"/>
+    </opaqueInsets>
+</ScrollPane>
